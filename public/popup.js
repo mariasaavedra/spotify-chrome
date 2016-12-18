@@ -55,7 +55,36 @@
       }
     });
   }
-
+  function getPlaylists(token) {
+    return $.ajax({
+      url: 'https://api.spotify.com/v1/	/v1/me/playlists',
+      headers: {'Authorization': 'Bearer ' + token },
+      type : 'GET',
+      success : function(data) {
+          alert('Data: '+ data);
+      }
+    });
+  }
+  function searchSong(q, token) {
+    return $.ajax({
+      url: 'https://api.spotify.com/v1/search?q=' + q + '&type=track',
+      headers: {'Authorization': 'Bearer ' + token },
+      type : 'GET',
+      success : function(data) {
+          alert('Data: '+ data);
+      }
+    });
+  }
+  function addSongToPlaylist(user_id, playlist_id, songs, token) {
+    return $.ajax({
+      url: 'https://api.spotify.com/v1/users/' + user_id + '/playlists/' + playlist_id + '/tracks',
+      headers: {'Authorization': 'Bearer ' + token },
+      type : 'POST',
+      success : function(data) {
+          alert('Data: '+ data);
+      }
+    });
+  }
 })();
 
 

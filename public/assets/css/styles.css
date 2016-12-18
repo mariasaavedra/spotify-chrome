@@ -2342,16 +2342,16 @@ html {
   box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3); }
 
 .popup-container {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#464dac+0,3572a2+38,0ee09d+100 */
-  background: #464dac;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#50db75+0,2f757e+100 */
+  background: #50db75;
   /* Old browsers */
-  background: -moz-linear-gradient(45deg, #464dac 0%, #3572a2 38%, #0ee09d 100%);
+  background: -moz-linear-gradient(-45deg, #50db75 0%, #2f757e 100%);
   /* FF3.6-15 */
-  background: -webkit-linear-gradient(45deg, #464dac 0%, #3572a2 38%, #0ee09d 100%);
+  background: -webkit-linear-gradient(-45deg, #50db75 0%, #2f757e 100%);
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(45deg, #464dac 0%, #3572a2 38%, #0ee09d 100%);
+  background: linear-gradient(135deg, #50db75 0%, #2f757e 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464dac', endColorstr='#0ee09d',GradientType=1 );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#50db75', endColorstr='#2f757e',GradientType=1 );
   /* IE6-9 fallback on horizontal gradient */
   width: 100%;
   min-height: 100%;
