@@ -28,6 +28,7 @@
      "https://accounts.spotify.com/authorize/*"
    ],
   "browser_action": {
-    "default_icon": "icon.png"
+    "default_icon": "spotify-lg.png",
+    "default_popup": "popup.html"
   }
 }
