@@ -7,11 +7,11 @@
     console.log(response.spotifyToken);
   }
 
-  function load(token){
+  function load(token, callback){
     var spotify_token = token;
     loadHTML();
     //getUserData(spotify_token);
-    /*
+/*
     return $.ajax({
       url: 'https://api.spotify.com/v1/me',
       headers: {
@@ -19,6 +19,7 @@
       },
       success : function(data) {
         loadHTML(data);
+        console.log(data);
       }
     });*/
   }
@@ -31,6 +32,7 @@
       birthday: content.birthdate
     };*/
     var person = {
+      id: "1283146871",
       name: "Maria Saavedra",
       photo: "https://profile-images.scdn.co/images/userprofile/default/9f02f1ce3e408675be5f935eb506e9e488c1f778",
       birthday: "03/16/1992",
@@ -75,7 +77,7 @@
       }
     });
   }
-  function addSongToPlaylist(user_id, playlist_id, songs, token) {
+  function addSongToPlaylist(user_id, playlist_id, token) {
     return $.ajax({
       url: 'https://api.spotify.com/v1/users/' + user_id + '/playlists/' + playlist_id + '/tracks',
       headers: {'Authorization': 'Bearer ' + token },

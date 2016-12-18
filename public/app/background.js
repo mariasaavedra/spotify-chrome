@@ -21,11 +21,22 @@ function launch_auth_flow () {
         token = token[1];
         if (token) {
            chrome.storage.local.set({'spotifyToken': token});
+           // getUserData(token); get user profile on load and store in storage.local to limit API hits.
         }
     });
 }
 
+function getUserData(token) {
+  return $.ajax({
+    url: 'https://api.spotify.com/v1/me',
+    headers: {'Authorization': 'Bearer ' + token },
+    type : 'GET',
+    success : function(data) {
+        alert('Data: '+ data);
+    }
+  });
+}
 
 window.onload = function(){
-  //launch_auth_flow();
+  launch_auth_flow();
 }
