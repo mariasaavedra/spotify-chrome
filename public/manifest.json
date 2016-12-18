@@ -16,7 +16,17 @@
       ]
     }
   ],
-  "permissions": [ "storage", "tabs", "http://*/*", "https://*/*", "identity"],
+  "permissions": [
+     "http://*/*",
+     "tabs",
+     "webNavigation",
+     "activeTab",
+     "storage",
+     "identity",
+     "declarativeContent",
+     "https://accounts.spotify.com/*",
+     "https://accounts.spotify.com/authorize/*"
+   ],
   "browser_action": {
     "default_icon": "icon.png"
   }

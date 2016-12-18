@@ -11,12 +11,11 @@ function get_redirect_url () {
 }
 
 function launchAuthFlow () {
-  redirect_url = get_redirect_url();
+  redirect_url = get_redirect_url() + "spotify";
   chrome.identity.launchWebAuthFlow(
     {'url': client_url, 'interactive': true},
-    function() {
+    function(redirect_url) {
         //Get access token
-        alert("hello");
     });
 }
 
