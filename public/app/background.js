@@ -17,7 +17,6 @@ function launch_auth_flow () {
     function(responseUrl) {
         //Get access token
         var regex = /=(.+)/; // match '=' and capture everything that follows
-        alert(responseUrl);
         var token = responseUrl.match(regex);
         token = token[1];
         if (token) {

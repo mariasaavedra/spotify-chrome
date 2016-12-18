@@ -9,19 +9,40 @@
 
   function load(token){
     var spotify_token = token;
+    loadHTML();
     //getUserData(spotify_token);
+    /*
     return $.ajax({
       url: 'https://api.spotify.com/v1/me',
       headers: {
        'Authorization': 'Bearer ' + token
       },
       success : function(data) {
-          console.log(data);
-        _.forEach(data, function(value, key) {
-          console.log(key, value);
-        });
+        loadHTML(data);
       }
-    });
+    });*/
+  }
+
+  function loadHTML(content){
+    /*
+    var person = {
+      name: "Maria Saavedra",
+      photo: content.images[0].url,
+      birthday: content.birthdate
+    };*/
+    var person = {
+      name: "Maria Saavedra",
+      photo: "https://profile-images.scdn.co/images/userprofile/default/9f02f1ce3e408675be5f935eb506e9e488c1f778",
+      birthday: "03/16/1992",
+      follows: 21
+    };
+    $("#profile")
+      .append("<img class='photo' src='" + person.photo + "'/>")
+      .append("<p class='name'>" + person.name + "</p>")
+      .append("<p class='follows'>" + "followers " + "(" + person.follows +")" + "</p>")
+      .append("<p class='birthday'>" + person.birthday + "</p>")
+      .append("<a href='#' class='add-song'>Add Current Song</a>");
+    console.log(person);
   }
 
   function getUserData(token) {

@@ -1,18 +1,79 @@
+@import 'font-awesome';
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
 body,
 html {
   position: relative;
-  height: 400px;
-  width: 300px;
+  height: 280px;
+  width: 280px;
   margin: 0 !important;
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
 }
-
+.shadow {
+  box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
+}
 .popup-container {
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f5f5f5+0,f9f9f9+100 */
-  background: #f5f5f5; /* Old browsers */
-  background: -moz-linear-gradient(top,  #f5f5f5 0%, #f9f9f9 100%); /* FF3.6-15 */
-  background: -webkit-linear-gradient(top,  #f5f5f5 0%,#f9f9f9 100%); /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom,  #f5f5f5 0%,#f9f9f9 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#f9f9f9',GradientType=0 ); /* IE6-9 */
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#464dac+0,3572a2+38,0ee09d+100 */
+  background: #464dac; /* Old browsers */
+  background: -moz-linear-gradient(45deg,  #464dac 0%, #3572a2 38%, #0ee09d 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(45deg,  #464dac 0%,#3572a2 38%,#0ee09d 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(45deg,  #464dac 0%,#3572a2 38%,#0ee09d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#464dac', endColorstr='#0ee09d',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  position: relative;
+  border-radius: 5px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.navbar {
+  display: block;
+  width: 100%;
+  visibility: hidden;
+  .icon {
+    color: #fff;
+  }
+}
+.add-song {
+  display: block;
+  border: 1px solid rgba(255,255,255,.8);
+  border-radius: 25px;
+  padding: .8rem 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 1rem auto;
+  font-size: .8rem;
+  max-width: 200px;
+}
+.profile {
+  .photo {
+    display: block;
+    margin: 1rem auto;
+    max-width: 80px;
+    height: auto;
+    border-radius: 100%;
+    @extend .shadow;
+  }
+  .name,
+  .birthday,
+  .follows {
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    margin: .25rem 0;
+  }
+  .name {
+    font-weight: 400;
+  }
+  .follows {
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: rgba(255,255,255,.8);
+  }
+  .birthday {
+    display: none;
+  }
 }
