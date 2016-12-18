@@ -1,0 +1,15 @@
+{
+  "name": "spotify-chrome",
+  "version": "1.0.0",
+  "description": "Chrome extension for adding Youtube videos to your Spotify account.",
+  "main": "content.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Maria Saavedra",
+  "license": "MIT",
+  "devDependencies": {
+    "jquery": "^3.1.1",
+    "lodash": "^4.17.2"
+  }
+}
